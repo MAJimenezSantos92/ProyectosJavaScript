@@ -75,3 +75,35 @@ array.reverse();
 console.log(array);
 
 
+let string2 = "a,b,c,d,e";
+
+console.log(string2.split(","));
+console.log("--------------");
+var string3 = "a,b,c,d,e,f";
+
+var array5 = string3.split(",")
+
+array5=array5.join("-");
+console.log(array5);
+
+var array55 = array5.split("-")
+console.log(array55);
+
+
+
+var numero2 = [2,5,8,3,9,12,22];
+
+var numeros_pares=numero2.filter(function(numero2){
+  return numero2 % 2 === 0;
+});
+
+
+console.log("Numeros pares: "+numeros_pares);
+
+
+var numeros_impares=numero2.filter(function(numero2){
+  return numero2 % 2 !== 0;
+});
+
+console.log("Numeros impares: "+numeros_impares);
+
