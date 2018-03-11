@@ -79,21 +79,21 @@ let string2 = "a,b,c,d,e";
 
 console.log(string2.split(","));
 console.log("--------------");
-var string3 = "a,b,c,d,e,f";
+let string3 = "a,b,c,d,e,f";
 
-var array5 = string3.split(",")
+let array5 = string3.split(",")
 
 array5=array5.join("-");
 console.log(array5);
 
-var array55 = array5.split("-")
+let array55 = array5.split("-")
 console.log(array55);
 
 
 
-var numero2 = [2,5,8,3,9,12,22];
+let numero2 = [2,5,8,3,9,12,22];
 
-var numeros_pares=numero2.filter(function(numero2){
+let numeros_pares=numero2.filter(function(numero2){
   return numero2 % 2 === 0;
 });
 
@@ -101,24 +101,24 @@ var numeros_pares=numero2.filter(function(numero2){
 console.log("Numeros pares: "+numeros_pares);
 
 
-var numeros_impares=numero2.filter(function(numero2){
+let numeros_impares=numero2.filter(function(numero2){
   return numero2 % 2 !== 0;
 });
 
 console.log("Numeros impares: "+numeros_impares);
 
 
-var numerospara2 = [2,5,8,3,9,12,22];
+let numerospara2 = [2,5,8,3,9,12,22];
 
 
-var numeros_cuadrados2 = numerospara2.map(function(elemento){
+let numeros_cuadrados2 = numerospara2.map(function(elemento){
   return elemento*elemento;
 });
 
 console.log("Numeros al cuadrado: "+numeros_cuadrados2);
 
 
-var numeroseach = [2,5,8,3,9,12,22];
+let numeroseach = [2,5,8,3,9,12,22];
 
 numeroseach.forEach(function(elemento, posicion, array){
   console.log("Elemento: "+elemento);
@@ -159,8 +159,18 @@ console.log(arraydatos);
 
 console.log("---------------------");
 console.log("Forma 2:");
-var n = 213;
-var digits = (""+n).split("");
+let n = 213;
+let digits = (""+n).split("");
 digits.sort(ordenardatos);
 digits.reverse();
 console.log(digits);
+
+
+let numerossss = [20,1,23,1,5];
+
+let sumanumeross = numerossss.reduce(function(valor_anterior, valor_actual, posicion,array){
+  return valor_anterior+valor_actual;
+},5);
+
+console.log("-Sumar los numeros del array, y tambien +5");
+console.log(sumanumeross);
