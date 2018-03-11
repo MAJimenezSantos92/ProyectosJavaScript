@@ -107,3 +107,60 @@ var numeros_impares=numero2.filter(function(numero2){
 
 console.log("Numeros impares: "+numeros_impares);
 
+
+var numerospara2 = [2,5,8,3,9,12,22];
+
+
+var numeros_cuadrados2 = numerospara2.map(function(elemento){
+  return elemento*elemento;
+});
+
+console.log("Numeros al cuadrado: "+numeros_cuadrados2);
+
+
+var numeroseach = [2,5,8,3,9,12,22];
+
+numeroseach.forEach(function(elemento, posicion, array){
+  console.log("Elemento: "+elemento);
+  console.log("Posición: "+posicion);
+  console.log("Array: "+array);
+  console.log("------");
+});
+
+
+
+numeroseach.forEach(function(elemento, posicion, array){
+  array[posicion] = Math.pow(elemento, 2);
+});
+
+console.log(numeroseach);
+ console.log("------"); 
+console.log("------");
+ console.log("------");
+ console.log("------");
+
+
+console.log("---------------------");
+console.log("Forma 1:");
+let number = 213;
+let numberStr = number.toString();
+let longitud33 = numberStr.length-1;
+console.log(longitud33);
+let arraydatos = [];
+while (longitud33>=0) {
+  console.log("Posicion: "+numberStr[longitud33]);
+  arraydatos.push(numberStr[longitud33]);
+  longitud33=longitud33-1;
+}
+arraydatos.sort(ordenardatos);
+arraydatos.reverse();
+console.log(arraydatos);
+
+
+console.log("---------------------");
+console.log("Forma 2:");
+var n = 213;
+var digits = (""+n).split("");
+digits.sort(ordenardatos);
+digits.reverse();
+console.log(digits);
